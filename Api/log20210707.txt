@@ -1,0 +1,143 @@
+2021-07-07 09:29:22.959 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 2feb25c2-6b07-452b-9a26-9868b041f3a8 Request: {"Name":"Alperen ErçİN","Email":"a@a.com","BirthDate":"1986-07-07T06:28:35.979Z"} { ActionId: "10a7fc97-5ed5-48fb-b337-7f2dfeb9d883", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000018-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 09:29:56.591 +03:00 [::1] [INF] [Infrastructure.Services.DomainEventService] TrackId:["2feb25c2-6b07-452b-9a26-9868b041f3a8"] Publishing domain event. Event - CustomerRegisteredEvent { ActionId: "10a7fc97-5ed5-48fb-b337-7f2dfeb9d883", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000018-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 09:33:51.777 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 8b9dd2ea-86b8-480f-9459-3749972587ca Request: {"Name":"Alperen ERÇİN","Email":"a@a","BirthDate":"1986-07-07T06:33:34.589Z"} { ActionId: "8a068d33-61bd-4ea9-bd4a-f9f810ca246e", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "8000001f-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 09:34:20.998 +03:00 [::1] [INF] [Infrastructure.Services.DomainEventService] TrackId:["8b9dd2ea-86b8-480f-9459-3749972587ca"] Publishing domain event. Event - CustomerRegisteredEvent { ActionId: "8a068d33-61bd-4ea9-bd4a-f9f810ca246e", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "8000001f-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 09:34:25.186 +03:00 [::1] [INF] [Application.Customer.EventHandlers.CustomerEventHandler] TrackId: 8b9dd2ea-86b8-480f-9459-3749972587ca CleanArchitecture Domain Event: CustomerRegisteredEvent { ActionId: "8a068d33-61bd-4ea9-bd4a-f9f810ca246e", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "8000001f-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 09:34:26.763 +03:00 [::1] [WRN] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] Long Running Request TrackId: 8b9dd2ea-86b8-480f-9459-3749972587ca and ElapsedMilliseconds: 31675 { ActionId: "8a068d33-61bd-4ea9-bd4a-f9f810ca246e", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "8000001f-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 09:34:28.328 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 8b9dd2ea-86b8-480f-9459-3749972587ca Response: {"Data":"6aa4293f-6e06-44d0-a8d4-e159970eb4b4","Succeeded":true,"Errors":[]} { ActionId: "8a068d33-61bd-4ea9-bd4a-f9f810ca246e", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "8000001f-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 09:40:33.037 +03:00 [::1] [INF] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] TrackId: 225e7ec3-e3a5-4697-bb73-e98c8803cbf6 Request: {"Id":"6aa4293f-6e06-44d0-a8d4-e159970eb4b4","Name":"","Email":"a1@a.com","BirthDate":"1987-07-07T06:40:04.043Z"} { ActionId: "622d1d20-b59f-41eb-8c29-fe6a7af62d2e", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000021-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 09:40:58.433 +03:00 [::1] [ERR] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] (TrackId: 225e7ec3-e3a5-4697-bb73-e98c8803cbf6) Request throw an unhandled exception { ActionId: "622d1d20-b59f-41eb-8c29-fe6a7af62d2e", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000021-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+System.Exception: Validation error is occured. Details: ["Please ensure you have entered the Name","The Name must have between 2 and 150 characters"]
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\ValidationBehaviour.cs:line 26
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-07-07 09:41:57.983 +03:00 [::1] [INF] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] TrackId: 42c79e35-a98b-49d0-8bcc-e7eaa542e9eb Request: {"Id":"6aa4293f-6e06-44d0-a8d4-e159970eb4b4","Name":"","Email":"a1@a.com","BirthDate":"1987-07-07T06:40:04.043Z"} { ActionId: "622d1d20-b59f-41eb-8c29-fe6a7af62d2e", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000023-0001-fb00-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 09:42:17.758 +03:00 [::1] [ERR] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] (TrackId: 42c79e35-a98b-49d0-8bcc-e7eaa542e9eb) Request throw an unhandled exception { ActionId: "622d1d20-b59f-41eb-8c29-fe6a7af62d2e", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000023-0001-fb00-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+System.Exception: Validation error is occured. Details: ["Please ensure you have entered the Name","The Name must have between 2 and 150 characters"]
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\ValidationBehaviour.cs:line 26
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-07-07 09:43:48.385 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: e7d24d88-c0d6-4bd4-ae97-5fa980756194 Request: {"Name":"Alperen ERÇİN","Email":"a@a","BirthDate":"1986-07-07T06:33:34.589Z"} { ActionId: "8a068d33-61bd-4ea9-bd4a-f9f810ca246e", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000023-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 09:44:25.081 +03:00 [::1] [ERR] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] (TrackId: e7d24d88-c0d6-4bd4-ae97-5fa980756194) Request throw an unhandled exception { ActionId: "8a068d33-61bd-4ea9-bd4a-f9f810ca246e", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000023-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+System.ArgumentException: Mail adresi sistemde kullanımdadır
+   at Domain.Aggregates.Customer.Strategies.Implementations.CustomerCreationPrerequisiteStrategy1.IsAllPrerequisitesSupplied(Customer customer) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Domain\Aggregates\Customer\Strategies\Implementations\CustomerCreationPrerequisiteStrategy1.cs:line 43
+   at Domain.Aggregates.Customer.Customer.Create(String name, String email, DateTime birthDate, ICustomerCreationPrerequisiteStrategy preconditionOfCreation) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Domain\Aggregates\Customer\Customer.cs:line 30
+   at Application.Customer.Commands.CreateCustomer.CreateCustomerCommandHandler.Handle(CreateCustomerCommand request, CancellationToken cancellationToken) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Customer\Commands\CreateCustomer\CreateCustomerCommand.cs:line 31
+   at Application.Common.Behaviours.PerformanceBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\PerformanceBehaviour.cs:line 29
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\ValidationBehaviour.cs:line 29
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-07-07 09:47:44.972 +03:00 [::1] [INF] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] TrackId: ae4478af-feed-426e-8e2c-ff4039addbd8 Request: {"Id":"6aa4293f-6e06-44d0-a8d4-e159970eb4b4","Name":"","Email":"a1@a.com","BirthDate":"1987-07-07T06:40:04.043Z"} { ActionId: "622d1d20-b59f-41eb-8c29-fe6a7af62d2e", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000025-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 09:47:50.272 +03:00 [::1] [ERR] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] (TrackId: ae4478af-feed-426e-8e2c-ff4039addbd8) Request throw an unhandled exception { ActionId: "622d1d20-b59f-41eb-8c29-fe6a7af62d2e", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000025-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+System.Exception: Validation error is occured. Details: ["Please ensure you have entered the Name","The Name must have between 2 and 150 characters"]
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\ValidationBehaviour.cs:line 26
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-07-07 09:50:46.509 +03:00 [::1] [INF] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] TrackId: ae18b547-bda1-42fb-be30-fc6ced3080d6 Request: {"Id":"6aa4293f-6e06-44d0-a8d4-e159970eb4b4","Name":"","Email":"string","BirthDate":"2021-07-07T06:50:27.327Z"} { ActionId: "3ba0dd37-d4a5-46c2-80b3-ac1a145d0e46", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "8000001d-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 09:50:50.435 +03:00 [::1] [ERR] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] (TrackId: ae18b547-bda1-42fb-be30-fc6ced3080d6) Request throw an unhandled exception { ActionId: "3ba0dd37-d4a5-46c2-80b3-ac1a145d0e46", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "8000001d-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+System.Exception: Validation error is occured. Details: ["Please ensure you have entered the Name","The Name must have between 2 and 150 characters","The customer must have 18 years or more","'Email' is not a valid email address."]
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\ValidationBehaviour.cs:line 26
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-07-07 09:51:35.251 +03:00 [::1] [INF] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] TrackId: 9dce417c-0bdc-4497-8f94-df6a3a5864d6 Request: {"Id":"6aa4293f-6e06-44d0-a8d4-e159970eb4b4","Name":"Alperen Erçin","Email":"alp_ercin@hotmail.com","BirthDate":"1986-07-29T06:50:27.327Z"} { ActionId: "3ba0dd37-d4a5-46c2-80b3-ac1a145d0e46", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000027-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 09:52:12.974 +03:00 [::1] [INF] [Infrastructure.Services.DomainEventService] TrackId:["9dce417c-0bdc-4497-8f94-df6a3a5864d6"] Publishing domain event. Event - CustomerUpdatedEvent { ActionId: "3ba0dd37-d4a5-46c2-80b3-ac1a145d0e46", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000027-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 09:52:19.264 +03:00 [::1] [INF] [Application.Customer.EventHandlers.CustomerEventHandler] TrackId: 9dce417c-0bdc-4497-8f94-df6a3a5864d6 CleanArchitecture Domain Event: CustomerUpdatedEvent { ActionId: "3ba0dd37-d4a5-46c2-80b3-ac1a145d0e46", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000027-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 09:52:21.021 +03:00 [::1] [WRN] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] Long Running Request TrackId: 9dce417c-0bdc-4497-8f94-df6a3a5864d6 and ElapsedMilliseconds: 41404 { ActionId: "3ba0dd37-d4a5-46c2-80b3-ac1a145d0e46", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000027-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 09:52:22.273 +03:00 [::1] [INF] [Application.Customer.Commands.UpdateCustomer.UpdateCustomerCommand] TrackId: 9dce417c-0bdc-4497-8f94-df6a3a5864d6 Response: {"Succeeded":true,"Errors":[]} { ActionId: "3ba0dd37-d4a5-46c2-80b3-ac1a145d0e46", ActionName: "Api.Controllers.CustomerController.UpdateCustomer (Api)", RequestId: "80000027-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/UpdateCustomer" }
+
+
+2021-07-07 10:42:57.862 +03:00 [::1] [INF] [Application.Customer.Commands.DeleteCustomer.DeleteCustomerCommand] TrackId: f6f528a5-dc21-4503-ab2b-7ef31322eae9 Request: {"Id":"6aa4293f-6e06-44d0-a8d4-e159970eb4b4"} { ActionId: "2c8c4074-a1da-4a54-97a9-a5542d476fd6", ActionName: "Api.Controllers.CustomerController.DeleteCustomer (Api)", RequestId: "80000030-0003-ed00-b63f-84710c7967bb", RequestPath: "/api/Customer/DeleteCustomer" }
+
+
+2021-07-07 10:44:20.772 +03:00 [::1] [INF] [Infrastructure.Services.DomainEventService] TrackId:["f6f528a5-dc21-4503-ab2b-7ef31322eae9"] Publishing domain event. Event - CustomerRemovedEvent { ActionId: "2c8c4074-a1da-4a54-97a9-a5542d476fd6", ActionName: "Api.Controllers.CustomerController.DeleteCustomer (Api)", RequestId: "80000030-0003-ed00-b63f-84710c7967bb", RequestPath: "/api/Customer/DeleteCustomer" }
+
+
+2021-07-07 10:44:28.339 +03:00 [::1] [INF] [Application.Customer.EventHandlers.CustomerEventHandler] TrackId: f6f528a5-dc21-4503-ab2b-7ef31322eae9 CleanArchitecture Domain Event: CustomerRemovedEvent { ActionId: "2c8c4074-a1da-4a54-97a9-a5542d476fd6", ActionName: "Api.Controllers.CustomerController.DeleteCustomer (Api)", RequestId: "80000030-0003-ed00-b63f-84710c7967bb", RequestPath: "/api/Customer/DeleteCustomer" }
+
+
+2021-07-07 10:44:29.418 +03:00 [::1] [WRN] [Application.Customer.Commands.DeleteCustomer.DeleteCustomerCommand] Long Running Request TrackId: f6f528a5-dc21-4503-ab2b-7ef31322eae9 and ElapsedMilliseconds: 88591 { ActionId: "2c8c4074-a1da-4a54-97a9-a5542d476fd6", ActionName: "Api.Controllers.CustomerController.DeleteCustomer (Api)", RequestId: "80000030-0003-ed00-b63f-84710c7967bb", RequestPath: "/api/Customer/DeleteCustomer" }
+
+
+2021-07-07 10:44:30.466 +03:00 [::1] [INF] [Application.Customer.Commands.DeleteCustomer.DeleteCustomerCommand] TrackId: f6f528a5-dc21-4503-ab2b-7ef31322eae9 Response: {"Succeeded":true,"Errors":[]} { ActionId: "2c8c4074-a1da-4a54-97a9-a5542d476fd6", ActionName: "Api.Controllers.CustomerController.DeleteCustomer (Api)", RequestId: "80000030-0003-ed00-b63f-84710c7967bb", RequestPath: "/api/Customer/DeleteCustomer" }
+
+
+2021-07-07 10:47:22.112 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 9210a5ae-a4ea-4450-a28d-e48c7a28312a Request: {"Name":"Berna Erçin","Email":"bercin@ercin.com","BirthDate":"1986-07-07T07:46:55.803Z"} { ActionId: "179e226e-0d56-4978-b4db-f88ab56d1924", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000037-0001-ff00-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 10:49:13.992 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 45517ae4-27d2-47d7-adea-a94a04da132b Request: {"Name":"Berna","Email":"b@e.com","BirthDate":"1986-07-07T07:48:49.422Z"} { ActionId: "af3a2ea3-9dfd-4eae-843d-3ecd578dd274", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000023-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 10:49:54.353 +03:00 [::1] [ERR] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] (TrackId: 45517ae4-27d2-47d7-adea-a94a04da132b) Request throw an unhandled exception { ActionId: "af3a2ea3-9dfd-4eae-843d-3ecd578dd274", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000023-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+System.ArgumentNullException: Value cannot be null. (Parameter 'collection')
+   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
+   at System.Collections.Generic.List`1.AddRange(IEnumerable`1 collection)
+   at Application.Common.Interfaces.ValidationResult..ctor(Boolean isValid, List`1 errors) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Interfaces\IValidation.cs:line 22
+   at Infrastructure.FluentValidation.FluentValidationService.Validate[T](T arg) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Infrastructure\FluentValidation\FluentValidationService.cs:line 34
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\ValidationBehaviour.cs:line 22
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-07-07 10:50:02.935 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: ce07bdd2-aa2f-42d8-8c1c-727b8bdd5b5d Request: {"Name":"Berna","Email":"b@e.com","BirthDate":"1986-07-07T07:48:49.422Z"} { ActionId: "af3a2ea3-9dfd-4eae-843d-3ecd578dd274", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "8000002b-0002-f100-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 10:52:50.061 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 3a1123bd-61aa-4335-a89c-960caf776076 Request: {"Name":"bercin","Email":"b@a","BirthDate":"1986-07-07T07:52:33.094Z"} { ActionId: "4a14abb8-a982-4380-a48d-c34ae45d8135", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000025-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 10:53:13.857 +03:00 [::1] [INF] [Infrastructure.Services.DomainEventService] TrackId:["3a1123bd-61aa-4335-a89c-960caf776076"] Publishing domain event. Event - CustomerRegisteredEvent { ActionId: "4a14abb8-a982-4380-a48d-c34ae45d8135", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000025-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 10:53:15.480 +03:00 [::1] [INF] [Application.Customer.EventHandlers.CustomerEventHandler] TrackId: 3a1123bd-61aa-4335-a89c-960caf776076 CleanArchitecture Domain Event: CustomerRegisteredEvent { ActionId: "4a14abb8-a982-4380-a48d-c34ae45d8135", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000025-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 10:53:16.418 +03:00 [::1] [WRN] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] Long Running Request TrackId: 3a1123bd-61aa-4335-a89c-960caf776076 and ElapsedMilliseconds: 14094 { ActionId: "4a14abb8-a982-4380-a48d-c34ae45d8135", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000025-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 10:53:17.565 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 3a1123bd-61aa-4335-a89c-960caf776076 Response: {"Data":"1e112762-dcd4-480c-94cf-9578abd6fcbf","Succeeded":true,"Errors":[]} { ActionId: "4a14abb8-a982-4380-a48d-c34ae45d8135", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000025-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-07 10:55:58.022 +03:00 [::1] [INF] [Application.Customer.Queries.GetCustomersWithPagination.GetCustomersWithPaginationQuery] TrackId: 532ac063-0183-40f5-97d3-d09cdf54b274 Request: {"Name":"ber","PageNumber":1,"PageSize":10} { ActionId: "c667bcd0-0bb1-409c-9b8b-c3f8d0b7a677", ActionName: "Api.Controllers.CustomerController.GetCustomer (Api)", RequestId: "80000027-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/GetCustomer" }
+
+
+2021-07-07 10:56:22.948 +03:00 [::1] [WRN] [Application.Customer.Queries.GetCustomersWithPagination.GetCustomersWithPaginationQuery] Long Running Request TrackId: 532ac063-0183-40f5-97d3-d09cdf54b274 and ElapsedMilliseconds: 25818 { ActionId: "c667bcd0-0bb1-409c-9b8b-c3f8d0b7a677", ActionName: "Api.Controllers.CustomerController.GetCustomer (Api)", RequestId: "80000027-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/GetCustomer" }
+
+
+2021-07-07 10:56:24.605 +03:00 [::1] [INF] [Application.Customer.Queries.GetCustomersWithPagination.GetCustomersWithPaginationQuery] TrackId: 532ac063-0183-40f5-97d3-d09cdf54b274 Response: {"Items":[{"Id":"1e112762-dcd4-480c-94cf-9578abd6fcbf","Name":"bercin","Email":"b@a","BirthDate":"1986-07-07T07:52:33.094"}],"PageIndex":1,"TotalPages":1,"TotalCount":1,"HasPreviousPage":false,"HasNextPage":false,"Succeeded":true,"Errors":[]} { ActionId: "c667bcd0-0bb1-409c-9b8b-c3f8d0b7a677", ActionName: "Api.Controllers.CustomerController.GetCustomer (Api)", RequestId: "80000027-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/GetCustomer" }
+
+

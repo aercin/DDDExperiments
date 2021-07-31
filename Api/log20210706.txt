@@ -1,0 +1,27 @@
+2021-07-06 09:19:19.210 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 41164d6c-69f3-4eef-a5ec-21f844cd9c8b Request: {"Name":"Alperen ErçiN","Email":"string","BirthDate":"1986-07-06T06:18:58.848Z"} { ActionId: "cf143111-c2d3-413c-9df2-b6cd032d3e4f", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000033-0001-ff00-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-06 09:19:19.535 +03:00 [::1] [ERR] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] (TrackId: 41164d6c-69f3-4eef-a5ec-21f844cd9c8b) Request throw an unhandled exception { ActionId: "cf143111-c2d3-413c-9df2-b6cd032d3e4f", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000033-0001-ff00-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+System.Exception: Validation error is occured. Details: ["'Email' is not a valid email address."]
+   at Application.Common.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\ValidationBehaviour.cs:line 26
+   at Application.Common.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next) in C:\Users\aercin\Desktop\Mimari Denemeler\DDDSample1\Application\Common\Behaviours\UnhandledExceptionBehaviour.cs:line 27
+
+
+2021-07-06 09:21:04.132 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: a6ec2834-a473-4cd0-a6c9-256fb2f85750 Request: {"Name":"Alperen ErçiN","Email":"a@a.com","BirthDate":"1986-07-06T06:18:58.848Z"} { ActionId: "cf143111-c2d3-413c-9df2-b6cd032d3e4f", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "8000002a-0003-ed00-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-06 09:26:46.515 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 1e26511a-b621-4c44-8ff2-1afb2396b183 Request: {"Name":"Alperen ErçiN","Email":"a@a.com","BirthDate":"1986-07-06T06:26:26.839Z"} { ActionId: "b0afce6c-0acd-4340-b8e9-ef856a502d4b", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000016-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-06 09:28:21.931 +03:00 [::1] [INF] [Infrastructure.Services.DomainEventService] TrackId:["1e26511a-b621-4c44-8ff2-1afb2396b183"] Publishing domain event. Event - CustomerRegisteredEvent { ActionId: "b0afce6c-0acd-4340-b8e9-ef856a502d4b", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000016-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-06 09:29:11.130 +03:00 [::1] [INF] [Application.Customer.EventHandlers.CustomerEventHandler] TrackId: 1e26511a-b621-4c44-8ff2-1afb2396b183 CleanArchitecture Domain Event: CustomerRegisteredEvent { ActionId: "b0afce6c-0acd-4340-b8e9-ef856a502d4b", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000016-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-06 09:29:29.907 +03:00 [::1] [WRN] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] Long Running Request TrackId: 1e26511a-b621-4c44-8ff2-1afb2396b183 and ElapsedMilliseconds: 154793 { ActionId: "b0afce6c-0acd-4340-b8e9-ef856a502d4b", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000016-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
+2021-07-06 09:29:31.638 +03:00 [::1] [INF] [Application.Customer.Commands.CreateCustomer.CreateCustomerCommand] TrackId: 1e26511a-b621-4c44-8ff2-1afb2396b183 Response: {"Data":"6e2c49a1-942c-4d3a-bec2-0b88d7c61359","Succeeded":true,"Errors":[]} { ActionId: "b0afce6c-0acd-4340-b8e9-ef856a502d4b", ActionName: "Api.Controllers.CustomerController.CreateCustomer (Api)", RequestId: "80000016-0000-f400-b63f-84710c7967bb", RequestPath: "/api/Customer/CreateCustomer" }
+
+
